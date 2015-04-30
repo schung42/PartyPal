@@ -1,0 +1,10 @@
+.editable {
+  background: transparent;
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
+.editable:hover,
+.editable:focus {
+  background: #fff;
+  border-color: #AAA;
+}

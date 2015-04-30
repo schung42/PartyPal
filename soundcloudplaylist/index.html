@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Playlists</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/playlists.css">
+  <link rel="stylesheet" href="css/playlist.css">
+  <link rel="stylesheet" href="css/list-item.css">
+  <link rel="stylesheet" href="css/editable.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <!-- FIXME: include CSS from views -->
+  <script data-main="js/app" src="js/vendor/require.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <aside id="list" class="pane"></aside>
+    <div id="content" class="pane"></div>
+  </div>
+
+  <script type="text/x-handlebars-template" id="tpl-list">
+    <h2 class="playlists__title">Playlists</h2>
+    {{#if playlists }}
+    <ul id="playlist-list" class="playlists">
+      {{#each playlists}}
+        <li id="link_to_{{ id }}" class="list-item">
+          <a class="list-item__link" href='#{{ id }}'>
+            <span class="list-item__text">{{ title }}</span>
+            <form class="list-item__form" data-playlist-id="{{ id }}"><input class="list-item__input" name="title" value='{{ title }}'></form>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    <form class="playlists__add">
+      <input name="title" class="playlists__add-input" type="text" placeholder="New playlist" required>
+    </form>
+  </script>
+
+  <script type="text/x-handlebars-template" id="tpl-playlist">
+    {{# if tracks }}
+    <ul class="playlist__tracks">
+      {{#each tracks}}
+      <li class="playlist__track">
+        <a class="playlist__track-play-pause icon icon-play" id="track_{{ id }}" data-track-id="{{ id }}"></a>
+        <span class="track-title">{{title}}</span>
+        <a class="playlist__delete-track" data-track-id="{{ id }}">
+          <i class="icon icon-trash"></i>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    <form class="playlists__add-track">
+      <input name="track" class="playlists__add-track-input" type="text" placeholder="https://soundcloud.com" required>
+      <button>Add</button>
+    </form>
+    <button class="playlists__remove">Remove playlist</button>
+  </script>
+  <p></p>
+</body>
+</html>

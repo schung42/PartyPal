@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>PartyPal</title>
+
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="assets/css/main.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/animate-custom.css" rel="stylesheet">
+<link href="assets/css/googs.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="assets/js/RefreshmentCalculator.js"></script>
+<script type="text/javascript" src="assets/js/BACCalculator.js"></script>
+<script type="text/javascript" src="assets/js/googs.js"></script>
+<script type="text/javascript" src="assets/js/audio-fx.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+
+    
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+<div id="navbar-main"> 
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand smoothScroll" href="#home"><i class="fa fa-beer icon-large fa-flip-horizontal"></i></a> </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+
+<!-- ==== HEADERWRAP ==== -->
+<div id="headerwrap" name="home">
+  <header class="clearfix"> <i class="fa fa-beer icon fa-flip-horizontal"></i>
+    <h1>PartyPal</h1>
+    <h2>Be The Best Host You Can Be</h2>
+    <a href="#alccalc" class="smoothScroll btn btn-lg">Let's do this.</a> </header>
+</div>
+<!-- /headerwrap --> 
+    
+<!-- ==== REFRESHMENT CALCULATOR ==== -->
+<div id="alccalc" name="Alcohol Calculator">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">Refreshment Calculator</h2>
+      <hr>
+    </div>
+       
+    <!-- /row -->
+    <div class="container" style="text-align: center;">
+      <div class="row"> 
+        <form id="drink">
+            <div class="row">
+                <label for="durationHours">Party Duration*</label>
+                <input type="number" id="durationHours" size="3" maxlength="3" value="1" class="form" style="width:40px"> hours
+            </div>
+            
+            <br>
+            
+            <div class="row">
+                <div>
+                    <h4><b>Guest Count*</b> (select average if you don't know)</h4>
+                </div>
+                <div class="drinkers">
+                    <input type="number" id="numLightDrinkers" size="3" maxlength="3" value="0" class="form" style="width:40px">
+                    <label for="numLightDrinkers">Light Drinkers</label>
+
+                    <input type="number" id="numAverageDrinkers" size="3" maxlength="3" value="0" class="form" style="width:40px">
+                    <label for="numAverageDrinkers">Average Drinkers</label>
+
+                    <input type="number" id="numHeavyDrinkers" size="3" maxlength="3" value="0" class="form" style="width:40px">
+                    <label for="numHeavyDrinkers">Heavy Drinkers</label>
+                </div>
+                
+                <br>
+                
+                <div><h4>What Will Be Served*</h4></div>
+                <div class="served">
+                    <label><input type="checkbox" id="isBeerServed"> Beer</label>
+                    <label><input type="checkbox" id="isWineServed"> Wine</label>
+                    <label><input type="checkbox" id="isLiquorServed"> Liquor</label>
+                    <br>
+                    <label><input type="checkbox" id="isCollegeMode">Enable College Mode</label>
+                </div>
+
+                <div class="buttons">
+                    <button id="calc" class="btn btn-primary">Calculate</button>
+                </div>
+            </div>
+
+            <div class="row needed">
+                <h4><strong>Drinks Needed</strong></h4>
+                <div id="drinkin"></div>
+            </div>
+        </form>  
+    </div>
+</div>
+      <!-- /row --> 
+</div>
+    <!-- /row -->
+<div style="text-align: center"><a href="#party" class="smoothScroll btn btn-primary btn-lg">Calculation Done</a></div>
+<!----/refreshmentCalculator-->
+</div>
+        
+<!-- ==== PARTY TIME ==== -->
+<div id="party" name="party">
+  <div class="container">
+      <h2 class="centered">Party Time!</h2>
+      <hr>
+    <div class="row" style="height: 350px;">
+        <iframe id="section" style="width:100%; height:100%;" src="soundcloudplaylist/index.html"></iframe> 
+    </div>
+    <!-- row --> 
+  </div>
+<div style="text-align: center"><a href="#BAC" class="smoothScroll btn btn-primary btn-lg">Going Home?</a></div>
+</div>
+<!-- container --> 
+    
+<!-- ==== BAC ==== -->
+<div id="BAC" name="BAC">
+  <div class="container">
+      <h2 class="centered">BAC Calculator</h2>
+      <hr>
+        <div class="col-lg-8 col-lg-offset-2" style="PADDING-LEFT:80px">
+            <!--Key for BAC Calculator-->
+            <table>
+                <tr>
+                    <td>
+                        <ul>
+                            <ul><strong>FLUID OUNCES KEY:</strong><br>(Beer ~ 12 oz. Wine Glass  ~ 4 oz.  1 Shot ~ 1.5 oz)</ul>
+                            <ul><strong>ALCOHOL PERCENTAGE IN EACH BEVERAGE:</strong><br>
+(Beer ~ 4-4.5%  Wine ~ 15-20%  1 Shot ~ 30-50%)</ul>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <!--key-->
+            <form method="post" name="bacform">
+                <table border=4>
+                    <tr>
+                        <td align="center">Fluid Ounces Consumed</td>
+                        <td align="center"><input type="text" name="ounces" size=16></td>
+                        <td align="center">Percent Alcohol</td>
+                        <td align="center"><input type="text" name="percent" size=16></td>
+                    </tr>
+                    <tr>
+                        <td align="center">Your Weight (lbs></td>
+                        <td align="center"><input type="text" name="weight" size=16></td>
+                        <td align="center">Hours of Consumption</td>
+                        <td align="center"><input type="text" name="hours" size=16></td>
+                    </tr>
+                    <tr>
+                        <td colspan=4 align="center">
+                            <input type="button" name="bac" value="Calculate BAC %" onClick="javascript:solveBAC(this.form)" class="btn btn-primary">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">BAC Percentage</td>
+                        <td colspan=3 align="center"><input type="text" name="bacamount" size=56></td>
+                    </tr>
+                    <tr>
+                        <td align="center">BAC Diagnosis</td>
+                        <td colspan=3 align="center">
+                            <textarea name="message" rows=3 cols=56 wrap=virtual></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+      
+      
+      
+      
+    <!-- row --> 
+  </div>
+<br>
+    <div class="col-md-6" style = "text-align: center"><a href="#party" class="smoothScroll btn btn-primary btn-lg"><i class="fa fa-thumbs-up fa-2x"></i></a></div>
+    <div class="col-md-6" style = "text-align: center"><a href="#googmap" class="smoothScroll btn btn-primary btn-lg"><i class="fa fa-thumbs-down fa-2x"></i></a></div>
+</div>
+<!-- container --> 
+
+<!-- ==== GoogleMaps! ==== -->
+<div id="googmap" name="googmap">
+  <div class="container">
+    <div class="row centered">
+      <h2 class="centered">Let's Get You Home</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2" style="text-align: center">
+        <div id="map_canvas" style="width:100%; height:350px"></div>
+            <form action="#" onSubmit="calcRoute();return false;" id="routeForm">
+                <label>
+                    From: <br />
+                        <input type="text" id="routeStart" placeholder="Origin">
+                            <a href="#" class="autoLink" style="display: none;">Use current location: <span>not found</span></a>
+                </label>
+                <label>
+                    To: <br />
+                        <input type="text" id="routeEnd" placeholder="Destination">
+                </label>
+                <label><input type="radio" name="travelMode" value="DRIVING" checked /> Driving</label>
+                <label><input type="radio" name="travelMode" value="TRANSIT" /> Public transport</label>
+                <label><input type="radio" name="travelMode" value="WALKING" /> Walking</label>
+                <input type="submit" value="Calculate route" class="btn btn-primary">
+            </form>
+          <div id="directionsPanel">Enter a starting point and click "Calculate route".</div>  
+          
+          <div style="text-align: center"><a href="https://www.google.com/?gws_rd=ssl#q=cab+service+near+me" class="smoothScroll btn btn-primary btn-lg">Taxi Services Near Me</a></div>
+      </div>
+    </div>
+  </div>
+  <!-- row --> 
+
+</div>
+<!-- container --> 
+
+
+<!-- container -->
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="assets/js/retina.js"></script> 
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
+<script type="text/javascript" src="assets/js/jquery-func.js"></script>
+<script type="text/javascript" src="assets/js/RefreshmentCalculator.js"></script>
+<script type="text/javascript" src="assets/js/BACCalculator.js"></script>
+<script type="text/javascript" src="assets/js/googs.js"></script>
+
+</body>
+</html>

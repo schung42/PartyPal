@@ -1,0 +1,43 @@
+.playlist__meta {
+  width: 100%;
+  font: inherit;
+  background: inherit;
+  border-color: transparent;
+  margin-bottom: 1em;
+}
+.playlist__description {
+  width: 100%;
+  max-width: 520px;
+  vertical-align: top;
+  display: inline-block;
+  white-space: nowrap;
+}
+.playlist__save-meta {
+  visibility: hidden;
+}
+.playlist__description:focus + .playlist__save-meta,
+.playlist__save-meta:focus,
+.playlist__save-meta:hover {
+  visibility: visible;
+}
+
+.playlist__tracks {
+  padding: 0;
+  margin: 1em 0 1em;
+}
+.playlist__track {
+  list-style: none;
+}
+.playlist__track-play-pause,
+.playlist__delete-track {
+  cursor: pointer;
+}
+.playlists__add-track {
+  margin-bottom: 1em;
+}
+.playlists__add-track-input {
+  width: 100%;
+  max-width: 520px;
+}
+
+.playlist__description-placeholder {}

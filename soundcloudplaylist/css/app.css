@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  color: #222;
+  background: #F5F7FA;
+  font: 14px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+
+textarea {
+  font: inherit;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+a {
+  color: #06C;
+  text-decoration: none;
+}
+
+.icon:hover,
+.icon:focus {
+  color: #a90000;
+}
+
+#list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  bottom: 0;
+  background: rgb(234, 240, 248);
+  border-right: 1px solid #d0d5db;
+}
+#content {
+  position: absolute;
+  width: 72%;
+  left: 25%;
+  padding: 25px 1% 0 2%;
+  top: 0;
+  bottom: 0;
+}
